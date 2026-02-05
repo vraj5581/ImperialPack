@@ -1,0 +1,123 @@
+:root {
+  --primary-color: #2563eb;
+  --primary-hover: #1e40af;
+  --secondary-color: #1f2937;
+  --accent-color: #3b82f6;
+  --background-light: #f9fafb;
+  --background-dark: #111827;
+  --text-main: #1f2937;
+  --text-light: #4b5563; /* Darker grey for better readability */
+  --white: #ffffff;
+  --font-heading: "Outfit", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --transition-speed: 0.3s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--white);
+  color: var(--text-main);
+  line-height: 1.7; /* Increased line height for readability */
+  font-size: 17px; /* Slightly larger base font size */
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased; /* Sharper text on Mac/iOS */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  line-height: 1.25;
+  font-weight: 700;
+  color: var(--secondary-color);
+  letter-spacing: -0.02em; /* Tighter tracking for headings */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color var(--transition-speed) ease;
+}
+
+button {
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Global Paragraph Style */
+/* Global Paragraph Style */
+p {
+  font-weight: 600 !important; /* Force Semi-Bold */
+  color: #111827 !important; /* Almost Black for maximum visibility */
+}
+
+li {
+  font-weight: 600 !important;
+  color: #111827;
+}
+
+/* Animations */
+/* Animations */
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(60px) scale(0.95);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); /* Snappy 'Box Place' effect */
+  will-change: opacity, transform;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.delay-100 {
+  transition-delay: 0.1s;
+}
+.delay-200 {
+  transition-delay: 0.2s;
+}
+.delay-300 {
+  transition-delay: 0.3s;
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.text-center {
+  text-align: center;
+}
+.mb-4 {
+  margin-bottom: 1rem;
+}
+.mb-8 {
+  margin-bottom: 2rem;
+}
