@@ -24,7 +24,7 @@
   background: linear-gradient(135deg, var(--primary-color), transparent);
   opacity: 0.1;
   border-radius: 50%;
-  filter: blur(80px);
+  filter: blur(81px);
 }
 
 .hero-container {
