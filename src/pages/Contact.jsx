@@ -34,12 +34,24 @@ function Contact() {
     if (!validate()) return;
 
     setIsSubmitting(true);
-    // Simulate API call
+    
+    // Save to localStorage
+    const newSubmission = {
+      id: Date.now(),
+      ...formData,
+      date: new Date().toISOString(),
+      status: 'unread'
+    };
+
+    const existingData = JSON.parse(localStorage.getItem('contact_messages') || '[]');
+    localStorage.setItem('contact_messages', JSON.stringify([newSubmission, ...existingData]));
+
+    // Simulate API call delay for UX
     setTimeout(() => {
       setSuccess(true);
       setFormData({ name: "", email: "", message: "" });
       setIsSubmitting(false);
-    }, 1500);
+    }, 1000);
   };
 
   return (
